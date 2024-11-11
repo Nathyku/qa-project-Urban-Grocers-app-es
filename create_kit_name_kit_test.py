@@ -58,5 +58,4 @@ def test_no_name(auth_token):
 
 # Test 9: Si se pasa un tipo incorrecto para "name", debería fallar
 def test_invalid_type_name(auth_token):
-    invalid_kit = {"name": 123}
-    negative_assert_code_400(invalid_kit, auth_token)
+    negative_assert_code_400(kit_bodies["invalid_kit"], auth_token)  # Usando el valor del diccionario
