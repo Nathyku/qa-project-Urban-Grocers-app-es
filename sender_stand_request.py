@@ -11,9 +11,8 @@ def create_new_user(user_body):
 
 # Función para crear un kit para el usuario
 def post_new_client_kit(kit_body, auth_token):
-    headers = {
-        "Authorization": f"Bearer {auth_token}",
-        "Content-Type": "application/json"
-    }
+    headers = data.headers.copy()
+    headers["Authorization"] = f"Bearer {auth_token}"
+    
     response = requests.post(CREATE_KIT_URL, json=kit_body, headers=headers)
     return response
