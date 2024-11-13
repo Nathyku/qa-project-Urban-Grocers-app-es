@@ -54,8 +54,8 @@ def test_numbers_in_name(auth_token):
 
 # Test 8: Si no se pasa el "name" en la solicitud, debería fallar
 def test_no_name(auth_token):
-    negative_assert_code_400({}, auth_token)
-
+    negative_assert_code_400(kit_bodies["no_name"], auth_token)
+    
 # Test 9: Si se pasa un tipo incorrecto para "name", debería fallar
 def test_invalid_type_name(auth_token):
-    negative_assert_code_400(kit_bodies["invalid_kit"], auth_token)  # Usando el valor del diccionario
+    negative_assert_code_400(kit_bodies["invalid_kit"], auth_token)
