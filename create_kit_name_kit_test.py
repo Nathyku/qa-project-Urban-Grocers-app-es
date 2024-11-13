@@ -5,7 +5,9 @@ from data import kit_bodies
 # Función para obtener un token de usuario
 @pytest.fixture
 def auth_token():
-    user_body = {
+    token = create_new_user(data.user_body)
+    return token
+        user_body = {
         "username": "newuser",
         "password": "password123",
         "email": "user@example.com"
