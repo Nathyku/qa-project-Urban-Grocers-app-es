@@ -20,3 +20,7 @@ kit_bodies = {
 
     "no_name": {}  # Nuevo caso donde `name` está ausente
 }
+
+headers = {
+    "Content-Type": "application/json"
+}
